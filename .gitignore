@@ -1,0 +1,5 @@
+config.toml
+sessions/
+__pycache__/
+.venv/
+.pytest_cache/
