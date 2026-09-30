@@ -1,0 +1,36 @@
+# Copy to config.toml and edit. Every key is optional.
+
+# Where frame analysis runs:
+#   "plan" (default): your Claude subscription (Pro, Max, Team) through your Claude Code login.
+#                     No API key, counts against your plan's usage limits.
+#   "api":            an ANTHROPIC_API_KEY, billed per token.
+backend = "plan"
+plan_model = "sonnet"     # Claude Code alias: haiku, sonnet or opus. Opus uses up limits fastest.
+plan_pause_at = 0.9       # stop coaching when your 5-hour window is 90% used, so you keep some
+# claude_path = "C:/Users/you/.local/bin/claude.exe"   # only if `claude` isn't on PATH
+
+# API model id used when backend = "api". claude-haiku-4-5 is about 4x cheaper per frame.
+model = "claude-opus-5-5"
+effort = "low"            # low keeps latency down for live coaching (both backends)
+
+# Seconds between analyzed frames while you're in a match.
+interval_seconds = 8.0
+# Seconds between frames when you're in menus or not in Overwatch.
+idle_interval_seconds = 20.0
+
+monitor = 1               # 1 = primary monitor
+frame_width = 1280        # frames are downscaled to this width before sending
+
+voice = true              # speak tips aloud
+voice_rate = 185          # words per minute
+overlay = true            # on-screen tip box (needs borderless windowed mode)
+overlay_position = "top-right"   # top-left, top-right, bottom-left, bottom-right
+overlay_seconds = 7.0
+
+# Throttling so the coach doesn't talk over your game.
+min_seconds_between_tips = 20.0
+category_cooldown_seconds = 90.0
+live_tips = true          # speak mid-fight tips; false = only coach while dead or in menus
+
+sessions_dir = "sessions" # frame log and end-of-session report go here
+save_frames = false       # keep the analyzed JPEGs for later review
