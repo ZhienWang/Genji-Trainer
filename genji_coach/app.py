@@ -105,6 +105,7 @@ class Runner:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(message)s")
+    logging.getLogger("comtypes").setLevel(logging.WARNING)  # Windows voice setup is chatty on first run
     cfg = Config.load(args.config)
     kb = KnowledgeBase.load(cfg.resolve(cfg.knowledge_dir))
     if args.backend:
