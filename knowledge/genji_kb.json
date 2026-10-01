@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "notes": "Curated Genji coaching knowledge. Every tip cites one or more source ids. Tips marked patch_sensitive describe mechanics Blizzard has tuned before; re-check them after balance patches. Add more with tools/learn_from_youtube.py, which writes knowledge/learned.json.",
+  "sources": [
+    {
+      "id": "necros_matchups",
+      "creator": "Necros (featured by KarQ)",
+      "title": "Elite Genji guide reveals how Overwatch players can win against any hero",
+      "url": "https://www.dexerto.com/overwatch/elite-genji-guide-reveals-how-overwatch-players-can-win-against-any-hero-1401489/",
+      "kind": "article summarizing a YouTube guide",
+      "note": "Dexerto write-up of top Genji Necros' hero-by-hero matchup advice, from a video by coach and YouTuber KarQ."
+    },
+    {
+      "id": "forum_indepth",
+      "creator": "Redemption (Blizzard forums)",
+      "title": "In-Depth Genji Guide",
+      "url": "https://us.forums.blizzard.com/en/overwatch/t/in-depth-genji-guide/326434",
+      "kind": "community guide",
+      "note": "Detailed community guide on dash resets, blade usage, deflect timing and combos."
+    },
+    {
+      "id": "ibtimes_advanced",
+      "creator": "IBTimes",
+      "title": "Overwatch 2: Advanced Genji Tips And Tricks",
+      "url": "https://www.ibtimes.com/overwatch-2-advanced-genji-tips-tricks-3630063",
+      "kind": "article",
+      "note": "Animation cancelling, dash cancelling and Dragonblade combo mechanics."
+    },
+    {
+      "id": "shadder_vods",
+      "creator": "Shadder2k",
+      "title": "Rank 1 Genji gameplay (reference VODs)",
+      "url": "https://www.youtube.com/watch?v=PsbAmL_GM0s",
+      "kind": "gameplay VOD",
+      "note": "Top-ranked Genji gameplay to study. Not yet mined for tips; run tools/learn_from_youtube.py on it to extract them."
+    },
+    {
+      "id": "shadder_vs_necros",
+      "creator": "Shadder2k vs Necros",
+      "title": "Battle of Genji Gods: Shadder2k playing against Necros",
+      "url": "https://www.youtube.com/watch?v=n9Il0M1k7KQ",
+      "kind": "gameplay VOD",
+      "note": "Mirror-matchup reference VOD. Not yet mined for tips."
+    },
+    {
+      "id": "unranked_to_gm",
+      "creator": "Unranked to GM: Genji Only (YouTube series)",
+      "title": "Unranked to GM: Genji Only playlist",
+      "url": "https://www.youtube.com/playlist?list=PLGIR6it42MtlzfeiniT_odGjxt6psAFTo",
+      "kind": "educational series",
+      "note": "Educational climb series. Not yet mined for tips."
+    },
+    {
+      "id": "community",
+      "creator": "Genji coaching community",
+      "title": "Widely taught Genji fundamentals",
+      "url": "",
+      "kind": "general knowledge",
+      "note": "Fundamentals repeated across Genji coaching content; not attributed to a single creator."
+    }
+  ],
+  "tips": [
+    {"id": "blade_farm_tanks", "category": "ult_economy", "situation": "Early in a fight or poking with shuriken, ult not ready", "tip": "Farm Dragonblade by poking the tanks too, not only squishies. Charge it fast.", "sources": ["necros_matchups"]},
+    {"id": "blade_supports_first", "category": "dragonblade", "situation": "Dragonblade active", "tip": "During blade, go for supports first; quick kills give dash resets and chain the blade.", "sources": ["forum_indepth"]},
+    {"id": "blade_not_vs_six", "category": "dragonblade", "situation": "Pulled blade into a grouped, full-health enemy team or while outnumbered", "tip": "Don't blade into a full, grouped team. Wait for a pick, an enemy ult, or your team to engage.", "sources": ["forum_indepth", "community"]},
+    {"id": "blade_track_cooldowns", "category": "dragonblade", "situation": "About to pull blade vs Ana, Brigitte or other stuns", "tip": "Before blading, check Ana sleep and nade and Brigitte bash. Blade when they're down.", "sources": ["forum_indepth", "necros_matchups"]},
+    {"id": "blade_slash_dash", "category": "dragonblade", "situation": "Dragonblade on a single target", "tip": "Slash then dash: swing, then dash through to finish the kill and refresh dash.", "sources": ["forum_indepth", "ibtimes_advanced"]},
+    {"id": "blade_aim_down", "category": "dragonblade", "situation": "Blade dash with no targets left, near a ledge", "tip": "With no targets left, aim slightly down when dashing so you don't fly off the map.", "sources": ["ibtimes_advanced"], "patch_sensitive": true},
+    {"id": "blade_evasive", "category": "dragonblade", "situation": "Taking damage during Dragonblade", "tip": "Move erratically during blade: jump, double jump and strafe so you're hard to hit.", "sources": ["forum_indepth"]},
+    {"id": "dash_reset_position", "category": "dash", "situation": "Just got a dash reset from an elimination", "tip": "After a reset, don't dash instantly. Reposition, then use it on the next kill or to escape.", "sources": ["forum_indepth"]},
+    {"id": "dash_save_escape", "category": "dash", "situation": "Used dash to engage a full-health target and got stuck with no escape", "tip": "Keep dash as your escape unless the combo will kill. Dash to finish, not to start.", "sources": ["forum_indepth", "community"]},
+    {"id": "dash_secure_reset", "category": "dash", "situation": "Low-health enemy near a teammate's damage", "tip": "Finish low targets yourself when you can; the kill resets your dash.", "sources": ["forum_indepth"]},
+    {"id": "combo_fan_dash", "category": "mechanics", "situation": "Close range burst on a squishy", "tip": "Burst combo: shuriken fan, dash through, then melee. Fan and dash hit hard together.", "sources": ["ibtimes_advanced", "forum_indepth"]},
+    {"id": "anim_cancel_melee", "category": "mechanics", "situation": "Throwing shuriken at close range", "tip": "Cancel shuriken recovery with a quick melee or dash for faster damage.", "sources": ["ibtimes_advanced"], "patch_sensitive": true},
+    {"id": "primary_lead", "category": "mechanics", "situation": "Missing primary fire at range", "tip": "Aim primary where the target is walking, not where they are. Shuriken are projectiles.", "sources": ["forum_indepth"]},
+    {"id": "deflect_when_no_dash", "category": "deflect", "situation": "Dash on cooldown and under fire", "tip": "Dash is down, so deflect is your defensive button. Deflect, then back off.", "sources": ["forum_indepth"]},
+    {"id": "deflect_cancel_bait", "category": "deflect", "situation": "Enemy holding fire while you deflect", "tip": "Cancel deflect early to bait. Enemies often wait it out, so stop and punish.", "sources": ["forum_indepth"]},
+    {"id": "deflect_orisa", "category": "matchups", "situation": "Fighting Orisa", "tip": "Vs Orisa, don't bother deflecting her Halt back; deflect her team's follow-up damage instead.", "sources": ["necros_matchups"], "patch_sensitive": true},
+    {"id": "rein_shatter", "category": "matchups", "situation": "Fighting Reinhardt at close range", "tip": "Vs Rein, double jump right after your dash to dodge Earthshatter; deflect his hammer swings.", "sources": ["necros_matchups"]},
+    {"id": "sigma_flux", "category": "matchups", "situation": "Dragonblade near Sigma", "tip": "Vs Sigma, kill with blade then dash out before Gravitic Flux lands.", "sources": ["necros_matchups"]},
+    {"id": "ashe_flank", "category": "matchups", "situation": "Diving Ashe", "tip": "Vs Ashe, flank without dash, land shuriken, deflect coach gun, then dash plus fan plus melee.", "sources": ["necros_matchups"]},
+    {"id": "echo_clone", "category": "matchups", "situation": "Enemy Echo duplicated", "tip": "Killing Echo's duplicate doesn't reset your dash. Don't count on it.", "sources": ["necros_matchups"], "patch_sensitive": true},
+    {"id": "pharah_high", "category": "matchups", "situation": "Fighting Pharah or high-ground targets", "tip": "Vs Pharah, double jump after dash and use fan at the high ground.", "sources": ["necros_matchups"]},
+    {"id": "ana_nade", "category": "matchups", "situation": "Engaging while enemy Ana has cooldowns", "tip": "Vs Ana, engage when her nade is down; double jump after dash in blade to dodge sleep.", "sources": ["necros_matchups"]},
+    {"id": "moira_fade", "category": "matchups", "situation": "Dragonblade target is Moira", "tip": "Don't blade Moira first; she fades out. Punish her during Coalescence instead.", "sources": ["necros_matchups"]},
+    {"id": "timing_with_team", "category": "positioning", "situation": "Diving alone before teammates engage", "tip": "Go in when your team goes in, or right after enemies burn key cooldowns. Not solo.", "sources": ["community"]},
+    {"id": "off_angle", "category": "positioning", "situation": "Walking down main path in enemy sightlines", "tip": "Take an off-angle or high ground with wall climb instead of walking the main path.", "sources": ["community"]},
+    {"id": "hitscan_los", "category": "positioning", "situation": "Crossing open ground in hitscan sightlines", "tip": "Don't cross open ground in view of their hitscan. Use cover and walls.", "sources": ["community"]},
+    {"id": "disengage_heal", "category": "survival", "situation": "Low health after engaging", "tip": "Low health: disengage to a health pack or your supports, then come back.", "sources": ["community"]},
+    {"id": "die_first", "category": "survival", "situation": "Died at the very start of a fight", "tip": "You died first. Wait for enemy attention to split before committing.", "sources": ["community"]},
+    {"id": "ult_combo", "category": "ult_economy", "situation": "Dragonblade ready alongside team ults", "tip": "Pair blade with team ults like Nano, Grav or Earthshatter for easy value.", "sources": ["community"]}
+  ]
+}

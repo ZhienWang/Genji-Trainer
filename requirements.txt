@@ -1,0 +1,8 @@
+anthropic>=1.9
+mss>=9.0
+Pillow>=10.0
+pyttsx3>=2.90
+# Optional: review a recorded match with --video
+# opencv-python>=4.8
+# Optional: pull YouTube transcripts in tools/learn_from_youtube.py
+# youtube-transcript-api>=1.0
